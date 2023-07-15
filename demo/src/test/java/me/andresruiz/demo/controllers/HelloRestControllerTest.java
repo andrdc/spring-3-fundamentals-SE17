@@ -1,7 +1,6 @@
 package me.andresruiz.demo.controllers;
 
 import me.andresruiz.demo.json.Greeting;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
