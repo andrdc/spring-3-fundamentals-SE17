@@ -12,7 +12,9 @@ class HelloControllerUnitTest {
         HelloController helloController = new HelloController();
         Model model = new BindingAwareConcurrentModel();
         String result = helloController.sayHello("Hanna", model);
-        assertEquals("welcome", result);
-        assertEquals("Hanna", model.asMap().get("user"));
+        assertAll("result",
+                () -> assertEquals("welcome", result),
+                () -> assertEquals("Hanna", model.getAttribute("user"))
+        );
     }
 }
